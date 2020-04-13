@@ -1,0 +1,21 @@
+Version 1.0
+i) Intial version Release
+
+Version 1.1
+i) Changes Done As Per Reviewer Comments.
+
+Version 1.2
+i) Resolved all issues as per reviewer comments.
+
+Version 1.3
+i)  Resolved function prefixed issue.
+ii) Resolved Demo content should not show on theme activation issue.
+
+Version 1.4
+i) Resolved Warning: Cannot modify header information - headers already sent by (output started at skt-condimentum/inc/about-themes.php:9
+ii) all instances of __()/_e() change with esc_html__()/esc_html_e() esc_attr__()/esc_attr_e()
+
+Version 1.5
+i)  Author URI and Theme URI changed.
+ii) Removed anchor link from footer.
+
