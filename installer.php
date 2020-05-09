@@ -89,12 +89,12 @@ abstract class DUPX_Bootstrap_Zip_Mode
 class DUPX_Bootstrap
 {
 	//@@ Params get dynamically swapped when package is built
-	const ARCHIVE_FILENAME	 = 'seo_reservas_497f9f1bddef4ce98863_20200430172313_archive.zip';
-	const ARCHIVE_SIZE		 = '57434048';
+	const ARCHIVE_FILENAME	 = 'practica_finalizada_8400a5af06c5b36a3442_20200509185431_archive.zip';
+	const ARCHIVE_SIZE		 = '48575585';
 	const INSTALLER_DIR_NAME = 'dup-installer';
-	const PACKAGE_HASH		 = '497f9f1-30172313';
-    const SECONDARY_PACKAGE_HASH = '10e3d7c-30172313';
-	const VERSION			 = '1.3.30';
+	const PACKAGE_HASH		 = '8400a5a-09185431';
+    const SECONDARY_PACKAGE_HASH = '9f411c2-09185431';
+	const VERSION			 = '1.3.32';
 
 	public $hasZipArchive     = false;
 	public $hasShellExecUnzip = false;
@@ -145,7 +145,7 @@ class DUPX_Bootstrap
 	{
 		date_default_timezone_set('UTC'); // Some machines don't have this set so just do it here
         
-		self::log('==DUPLICATOR INSTALLER BOOTSTRAP v1.3.30==');
+		self::log('==DUPLICATOR INSTALLER BOOTSTRAP v1.3.32==');
 		self::log('----------------------------------------------------');
 		self::log('Installer bootstrap start');
 
@@ -155,7 +155,7 @@ class DUPX_Bootstrap
 		$error					= null;
 
 		$is_installer_file_valid = true;
-		if (preg_match('/_([a-z0-9]{7})[a-z0-9]{13}_[0-9]{6}([0-9]{8})_archive.(?:zip|daf)$/', $archive_filename, $matches)) {
+		if (preg_match('/_([a-z0-9]{7})[a-z0-9]+_[0-9]{6}([0-9]{8})_archive.(?:zip|daf)$/', $archive_filename, $matches)) {
 			$expected_package_hash = $matches[1].'-'.$matches[2]; 
 			if (self::PACKAGE_HASH != $expected_package_hash) {
 				$is_installer_file_valid = false;
